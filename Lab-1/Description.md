@@ -27,3 +27,28 @@ This lab focused on understanding how data travels over a network by *observing 
 
 ## Assessment Note  
 The **Lab Test on Nalanda portal** consisted of **4 questions**, testing understanding of Wireshark packet analysis and Traceroute output interpretation.
+
+
+## Example Outputs
+
+### Example: Wireshark Output (HTTP Packet)
+
+**Packet List View (simplified):**
+
+| No. | Time      | Source IP       | Destination IP | Protocol | Info                        |
+|-----|-----------|----------------|----------------|---------|-----------------------------|
+| 12  | 2.345678  | 192.168.1.5    | 172.217.23.238 | HTTP    | GET /login.jsp HTTP/1.1     |
+| 13  | 2.567890  | 172.217.23.238 | 192.168.1.5    | HTTP    | 200 OK                      |
+
+**HTTP GET Packet Details:**
+
+### Traceroute Output
+
+| Hop | IP Address       | Probe 1 | Probe 2 | Probe 3 |
+|-----|-----------------|---------|---------|---------|
+| 1   | 192.168.1.1     | 1.23 ms | 1.10 ms | 1.15 ms |
+| 2   | 10.10.0.1       | 5.45 ms | 5.60 ms | 5.52 ms |
+| 3   | 72.14.214.168   | 9.80 ms | 9.75 ms | 9.90 ms |
+| 4   | 108.170.245.49  | 15.20 ms| 15.10 ms| 15.30 ms|
+| 5   | 172.217.23.238  | 18.40 ms| 18.35 ms| 18.50 ms|
+
